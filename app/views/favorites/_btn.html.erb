@@ -1,0 +1,5 @@
+<% if book.favorited_by?(current_user) %>
+  <p><%= link_to "❤︎",  book_favorites_path(book), method: :delete %>いいね</p>
+<% else %>
+  <p><%= link_to "🤍", book_favorites_path(book), method: :post %>いいね</p>
+<% end %>
